@@ -28,7 +28,7 @@ classes = ['Car', 'Pedestrian', 'Van', 'Cyclist', 'Truck', 'Misc', 'Tram', 'Pers
 @st.cache_resource
 def load_model():
     # Load the model (assuming the model is in the same directory as the app)
-    model = YOLO("C:/Users/tiwar/ML_project/best.pt")
+    model = YOLO("best.pt")
     return model
 
 # Load the model
@@ -387,11 +387,3 @@ with st.sidebar:
     3. Adjust detection parameters if needed
     4. Click the process button to see results
     """)
-    
-    # Add an example image or placeholder if URL not accessible
-    st.header("Sample Detection")
-    try:
-        st.image("https://raw.githubusercontent.com/ultralytics/yolov5/master/data/images/zidane.jpg", 
-                caption="Example Detection", use_column_width=True)
-    except:
-        st.info("Sample image could not be loaded. Please upload your own images for detection.")
