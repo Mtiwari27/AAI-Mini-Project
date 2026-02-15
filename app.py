@@ -28,7 +28,7 @@ classes = ['Car', 'Pedestrian', 'Van', 'Cyclist', 'Truck', 'Misc', 'Tram', 'Pers
 @st.cache_resource
 def load_model():
     # Load the model (assuming the model is in the same directory as the app)
-    model = YOLO("best.pt")
+    model = YOLO("yolov8n.pt")
     return model
 
 # Load the model
@@ -387,3 +387,4 @@ with st.sidebar:
     3. Adjust detection parameters if needed
     4. Click the process button to see results
     """)
+
